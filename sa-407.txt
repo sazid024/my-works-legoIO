@@ -1,0 +1,8 @@
+1. SELECT employee.Employee_Id, employee.Employee_name, employee.Salary, employee.Department_id, department.Department_name FROM employee, department WHERE employee.Department_id = department.Department_id;
+2. SELECT employee.Employee_Id, employee.Employee_name, employee.Salary FROM employee JOIN department ON employee.Department_id = department.Department_id WHERE employee.Salary > employee.salary;
+3. SELECT employee.Employee_Id, employee.Employee_name, employee.Salary FROM employee JOIN department ON employee.Department_id = department.Department_id WHERE Department_name NOT IN ('Sales', 'IT');
+4. SELECT employee.Employee_Id, employee.Employee_name, employee.Salary FROM employee JOIN department ON employee.Department_id = department.Department_id GROUP BY Department_name HAVING AVG(salary) > 60000;
+5. SELECT employee.Employee_name, department.Department_name, project.Project_name FROM employee JOIN department on employee.Department_id = department.Department_id JOIN project ON employee.Employee_Id = project.Employee_id;
+6. 
+7. SELECT employee.Employee_name, employee.Department_id FROM employee LEFT JOIN project ON employee.Employee_Id = project.Employee_id WHERE project.Project_id IS NULL;
+8. 
